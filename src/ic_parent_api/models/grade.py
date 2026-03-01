@@ -178,4 +178,4 @@ class Grade(DataModel):
     @property
     def terms(self) -> list[GradeTerm]:
         """Property Definition."""
-        return [GradeTerm(term.model_dump()) for term in self._terms]
+        return [GradeTerm(term.dict()) for term in self._terms]

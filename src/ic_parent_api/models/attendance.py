@@ -92,4 +92,4 @@ class Attendance(DataModel):
     @property
     def terms(self) -> list[AttendanceTerm]:
         """Property Definition."""
-        return [AttendanceTerm(term.model_dump()) for term in self._terms]
+        return [AttendanceTerm(term.dict()) for term in self._terms]
